@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<app-encabezado></app-encabezado><br>
+
+
+
+
+<div class="container text-center">
+    <h1 class="display-4 mt-5 mb-3">Resumen</h1>
+    <form (ngSubmit)="resu()">
+      <div class="form-group row">
+        <label for="Id" class="col-md-3 col-form-label text-md-right">Digite el link </label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" [(ngModel)]="link" id="link" name="link">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Id" class="col-md-3 col-form-label text-md-right">Digite el minimo de palabras que desea tener el resumen </label>
+        <div class="col-md-9">
+          <input type="number" class="form-control" [(ngModel)]="min" id="min" name="min">
+        </div>
+      </div>
+   
+    <button type="submit" class="btn btn-primary mx-auto mt-3 ml-5">Enviar</button>
+        <!-- Type submit recibe dato de ngModel y llama la funcion ngsubmit de la funcion resumen de javacripts si no existe se genera un error -->
+    </form>
+</div>
+
+<app-pie></app-pie>
+
